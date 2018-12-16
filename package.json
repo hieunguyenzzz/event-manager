@@ -9,13 +9,18 @@
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.83.0",
     "cuid": "^2.1.4",
-    "react-router-dom": "^4.3.1"
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1",
+    "react-redux": "^5.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "redux-devtools-extension": "^2.13.7"
   },
   "eslintConfig": {
     "extends": "react-app"

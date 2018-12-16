@@ -6,6 +6,7 @@ import {Route, Switch} from "react-router-dom";
 import HomePage from "../../features/home/HomePage";
 import PeopleDashBoard from "../../features/user/PeopleDashboard/PeopleDashboard";
 import SettingsDashboard from "../../features/user/Setting/SettingsDashboard";
+import TestComponent from "../../features/testarea/TestComponent";
 
 class App extends Component {
     render() {
@@ -22,6 +23,7 @@ class App extends Component {
                         <Container className="main">
                             <Switch>
                                 <Route path="/events" component={EventDashboard}/>
+                                <Route path="/test" component={TestComponent} />
                                 <Route path="/peoples" component={PeopleDashBoard}/>
                                 <Route path="/settings" component={SettingsDashboard}/>
                             </Switch>
