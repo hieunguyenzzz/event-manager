@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 
 class EventListItem extends Component {
     render() {
-        const {event, handleOpenEvent, handleDeleteEvent} = this.props;
+        const {event, handleDeleteEvent} = this.props;
 
         return (
             <Segment.Group>
@@ -41,7 +41,7 @@ class EventListItem extends Component {
                 </Segment>
                 <Segment clearing>
                     <Button as={Link} to={`/event/${event.id}`} color="teal" floated="right" content="View"
-                            onClick={handleOpenEvent(event)}/>
+                            />
                     <Button as="a" color="red" floated="right" content="Delete" onClick={handleDeleteEvent(event.id)}/>
                 </Segment>
             </Segment.Group>
