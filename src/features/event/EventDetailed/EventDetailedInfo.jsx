@@ -1,7 +1,16 @@
 import React, {Component} from 'react';
 import {Segment, Grid, Icon, Button} from 'semantic-ui-react';
+import EventMap from "./EventMap";
 
 class EventDetailedInfo extends Component {
+    state = {
+        showMap: false
+    }
+
+    handleShowMap = () => {
+        this.setState({showMap: !this.state.showMap});
+    }
+
     render() {
         const {event} = this.props;
         return (
@@ -35,10 +44,15 @@ class EventDetailedInfo extends Component {
                             <span>{event.venue}</span>
                         </Grid.Column>
                         <Grid.Column width={4}>
-                            <Button color="teal" size="tiny" content="Show Map" />
+                            <Button color="teal" size="tiny" content="Show Map" onClick={this.handleShowMap} />
+
                         </Grid.Column>
                     </Grid>
                 </Segment>
+                {this.state.showMap &&
+                <Segment attached>
+                     <EventMap center={event.venueLatLng}  />
+                </Segment>}
             </Segment.Group>
         );
     }
